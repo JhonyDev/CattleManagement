@@ -118,7 +118,7 @@
                         android:layout_gravity="center"
                         android:layout_marginHorizontal="15dp"
                         android:gravity="center"
-                        android:text="Explore Cattle"
+                        android:text="Explore Animal"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />

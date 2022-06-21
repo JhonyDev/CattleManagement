@@ -1,4 +1,4 @@
-package com.app.cattlemanagement.activities.seller;
+package com.app.cattlemanagement.activities.farmer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +11,12 @@ import com.app.cattlemanagement.activities.auth.AuthLoginActivity;
 import com.app.cattlemanagement.activities.buyer.BuyerDashboard;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SellerDashboard extends AppCompatActivity {
+public class FarmerDashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seller_dashboard);
+        setContentView(R.layout.activity_farmer_dashboard);
     }
 
     public void sellCattle(View view) {

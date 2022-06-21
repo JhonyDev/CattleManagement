@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CattleManagement">
         <activity
-            android:name=".activities.seller.SellerDashboard"
+            android:name=".DairyProducts"
+            android:exported="false" />
+        <activity
+            android:name=".activities.farmer.FarmerDashboard"
             android:exported="false" />
         <activity
             android:name=".activities.buyer.BuyerDashboard"

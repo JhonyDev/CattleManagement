@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.cattlemanagement.R;
 import com.app.cattlemanagement.activities.auth.AuthLoginActivity;
-import com.app.cattlemanagement.activities.seller.SellerDashboard;
+import com.app.cattlemanagement.activities.farmer.FarmerDashboard;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class BuyerDashboard extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class BuyerDashboard extends AppCompatActivity {
     }
 
     public void switchToSeller(View view) {
-        startActivity(new Intent(this, SellerDashboard.class));
+        startActivity(new Intent(this, FarmerDashboard.class));
         finish();
 
     }
