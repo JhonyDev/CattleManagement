@@ -131,7 +131,8 @@ public class AuthRegistration extends AppCompatActivity implements Info {
 
     private void initAuth(User userModel) {
         dgLoading.show();
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(strEtEmail, strEtConfirmPassword)
+        FirebaseAuth.getInstance()
+                .createUserWithEmailAndPassword(strEtEmail, strEtConfirmPassword)
                 .addOnCompleteListener(task -> {
                     dgLoading.dismiss();
                     if (task.isSuccessful()) {
