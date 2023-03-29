@@ -9,15 +9,28 @@
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/drawable/ic_lock.xml" value="0.1" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/drawable/ic_rectangle_1594.xml" value="0.1" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/drawable/upper_cut.xml" value="0.1" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_add_location.xml" value="0.2" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_add_trash_source.xml" value="0.176" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_admin_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_animals.xml" value="0.25" />
-        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_buyer_dashboard.xml" value="0.264" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_assigned_trash_locations.xml" value="0.1" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_buyer_dashboard.xml" value="0.176" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_driver_assignment.xml" value="0.176" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_farmer_dashboard.xml" value="0.264" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_registration.xml" value="0.2" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_seller_dashboard.xml" value="0.2" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_splash.xml" value="0.176" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_trash_source_requests.xml" value="0.2" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/activity_user_registrations.xml" value="0.2" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/date_picker_dialog.xml" value="0.1" />
         <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/dialog_loading.xml" value="0.1" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/drive_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/rv_assigned_trash_sources.xml" value="0.2" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/rv_trash_source.xml" value="0.25" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/rv_trash_source_assignment.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/Jhony Dev/AndroidStudioProjects/CattleManagement/app/src/main/res/layout/rv_user_registrations.xml" value="0.2" />
       </map>
     </option>
   </component>

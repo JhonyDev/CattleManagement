@@ -12,13 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CattleManagement">
         <activity
-            android:name=".DairyProducts"
+            android:name=".activities.admin.DriverAssignmentActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.farmer.FarmerDashboard"
+            android:name=".activities.admin.TrashSourceRequestsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.buyer.BuyerDashboard"
+            android:name=".activities.admin.UserRegistrationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.driver.AssignedTrashLocationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.consumer.AddTrashSourceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.consumer.AddLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.driver.DriverDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".activities.consumer.ConsumerDashboard"
             android:exported="false" />
         <activity
             android:name=".activities.auth.AuthRegistration"

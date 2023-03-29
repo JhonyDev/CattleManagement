@@ -1,8 +1,8 @@
 package com.app.cattlemanagement.models;
 
-public class User {
+public class User extends Super {
     String id, firstName, lastName, desc,
-            phone, type, status;
+            phone, type, userType, status;
 
     public User() {
     }
@@ -71,5 +71,13 @@ public class User {
 
     public void setVerStatus(String status) {
         this.status = status;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }

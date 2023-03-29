@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Cattle Point</string>
+    <string name="my_spinner_prompt">Select an option</string>
+    <array name="my_spinner_options">
+        <item>Driver</item>
+        <item>Consumer</item>
+    </array>
+    <string name="app_name">Smart City Garbage Management System (SCGMS)</string>
     <string name="welcome_back_sign_in_to_continue"><b>Welcome Back!</b> Sign in to continue</string>
     <string name="email">Email</string>
     <string name="password">Password</string>

@@ -8,12 +8,13 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.cattlemanagement.R;
-import com.app.cattlemanagement.activities.buyer.BuyerDashboard;
+import com.app.cattlemanagement.activities.consumer.ConsumerDashboard;
 import com.app.cattlemanagement.info.Info;
 import com.app.cattlemanagement.models.User;
 import com.app.cattlemanagement.singletons.CurrentUserSingleton;
@@ -37,8 +38,10 @@ public class AuthRegistration extends AppCompatActivity implements Info {
     EditText etConfirmPassword;
     EditText etFirstName;
     EditText etLastName;
+    Spinner spnUserType;
 
 
+    String strSpnUserType;
     String strEtFirstName;
     String strEtLastName;
     String strEtEmail;
@@ -87,9 +90,11 @@ public class AuthRegistration extends AppCompatActivity implements Info {
         strEtPhone = etPhone.getText().toString();
         strEtPassword = etPassword.getText().toString();
         strEtConfirmPassword = etConfirmPassword.getText().toString();
+        strSpnUserType = spnUserType.getSelectedItem().toString();
     }
 
     private void initViews() {
+        spnUserType = findViewById(R.id.my_spinner);
         etEmail = findViewById(R.id.et_user_name);
         etPhone = findViewById(R.id.et_phone);
         etPassword = findViewById(R.id.et_pass);
@@ -104,6 +109,7 @@ public class AuthRegistration extends AppCompatActivity implements Info {
 
     public void SignUp(View view) {
         castStrings();
+
         if (!Utils.validEt(etFirstName, strEtFirstName))
             return;
 
@@ -123,9 +129,8 @@ public class AuthRegistration extends AppCompatActivity implements Info {
 
         String id = "0";
         User userModel = new User(id, strEtFirstName, strEtLastName, "-",
-                strEtPhone, "-", "-");
-
-
+                strEtPhone, "-", Info.USER_IN_ACTIVE);
+        userModel.setUserType(strSpnUserType);
         initAuth(userModel);
     }
 
@@ -153,7 +158,8 @@ public class AuthRegistration extends AppCompatActivity implements Info {
                     dgLoading.dismiss();
                     if (task.isSuccessful()) {
                         CurrentUserSingleton.setInstance(userModel);
-                        startActivity(new Intent(AuthRegistration.this, BuyerDashboard.class));
+                        Toast.makeText(AuthRegistration.this, "Your Registration is sent to Admin. Please wait for approval", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(AuthRegistration.this, AuthLoginActivity.class));
                         finish();
 
                     } else

@@ -15,7 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.cattlemanagement.R;
-import com.app.cattlemanagement.activities.buyer.BuyerDashboard;
+import com.app.cattlemanagement.activities.admin.AdminDashboardActivity;
+import com.app.cattlemanagement.activities.consumer.ConsumerDashboard;
+import com.app.cattlemanagement.activities.driver.DriverDashboard;
 import com.app.cattlemanagement.info.Info;
 import com.app.cattlemanagement.models.User;
 import com.app.cattlemanagement.singletons.CurrentUserSingleton;
@@ -77,9 +79,25 @@ public class AuthLoginActivity extends AppCompatActivity implements Info {
                             Toast.makeText(AuthLoginActivity.this, "Error fetching user data", Toast.LENGTH_SHORT).show();
                             return;
                         }
+
+                        if (userModel.getUserType().equals(Info.TYPE_ADMIN)) {
+                            startActivity(new Intent(AuthLoginActivity.this, AdminDashboardActivity.class));
+                            finish();
+                            return;
+                        }
+                        if (userModel.getVerStatus().equals(Info.USER_IN_ACTIVE)) {
+                            Toast.makeText(AuthLoginActivity.this, "You are not allowed to login. Please wait for approval.", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
                         CurrentUserSingleton.setInstance(userModel);
-                        startActivity(new Intent(AuthLoginActivity.this, BuyerDashboard.class));
+
+                        if (userModel.getUserType().equals(Info.TYPE_DRIVER))
+                            startActivity(new Intent(AuthLoginActivity.this, DriverDashboard.class));
+                        else
+                            startActivity(new Intent(AuthLoginActivity.this, ConsumerDashboard.class));
                         finish();
+
                     }
 
                     @Override
@@ -152,14 +170,29 @@ public class AuthLoginActivity extends AppCompatActivity implements Info {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         loadingDialog.dismiss();
-                        User user = snapshot.getValue(User.class);
-                        if (user == null) {
+                        User userModel = snapshot.getValue(User.class);
+                        if (userModel == null) {
                             Toast.makeText(AuthLoginActivity.this, "Error fetching data", Toast.LENGTH_SHORT).show();
                             return;
                         }
-                        CurrentUserSingleton.setInstance(user);
-                        startActivity(new Intent(AuthLoginActivity.this, BuyerDashboard.class));
+                        if (userModel.getUserType().equals(Info.TYPE_ADMIN)) {
+                            startActivity(new Intent(AuthLoginActivity.this, AdminDashboardActivity.class));
+                            finish();
+                            return;
+                        }
+                        if (userModel.getVerStatus().equals(Info.USER_IN_ACTIVE)) {
+                            Toast.makeText(AuthLoginActivity.this, "You are not allowed to login. Please wait for approval.", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        CurrentUserSingleton.setInstance(userModel);
+
+                        if (userModel.getUserType().equals(Info.TYPE_DRIVER))
+                            startActivity(new Intent(AuthLoginActivity.this, DriverDashboard.class));
+                        else
+                            startActivity(new Intent(AuthLoginActivity.this, ConsumerDashboard.class));
                         finish();
+
 
                     }
 

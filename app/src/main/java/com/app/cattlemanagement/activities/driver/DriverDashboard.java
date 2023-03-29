@@ -1,4 +1,4 @@
-package com.app.cattlemanagement.activities.farmer;
+package com.app.cattlemanagement.activities.driver;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,35 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.cattlemanagement.R;
 import com.app.cattlemanagement.activities.auth.AuthLoginActivity;
-import com.app.cattlemanagement.activities.buyer.BuyerDashboard;
+import com.app.cattlemanagement.activities.consumer.ConsumerDashboard;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class FarmerDashboard extends AppCompatActivity {
+public class DriverDashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farmer_dashboard);
-    }
-
-    public void sellCattle(View view) {
-
-    }
-
-    public void updateCattleInfo(View view) {
-
-    }
-
-    public void addDiary(View view) {
-
-    }
-
-    public void checkMilk(View view) {
-
-    }
-
-    public void feedManagement(View view) {
-
     }
 
     public void logout(View view) {
@@ -46,7 +26,12 @@ public class FarmerDashboard extends AppCompatActivity {
     }
 
     public void switchToBuyer(View view) {
-        startActivity(new Intent(this, BuyerDashboard.class));
+        startActivity(new Intent(this, ConsumerDashboard.class));
         finish();
+    }
+
+    public void assignedTrashLocations(View view) {
+        startActivity(new Intent(this, AssignedTrashLocationsActivity.class));
+
     }
 }
